@@ -31,7 +31,7 @@ sampleLabels(ce)
 #(1) Annotation
 
 library(SummarizedExperiment)
-load("/Users/cesc/Desktop/Asmaa/MSCs_Target/human_ann_chrM.RData")
+load("/Users/cesc/Desktop/Asmaa/MSCs_Target/human_ann.RData")
 annotateCTSS(ce, gff)
 colData(ce)[,c("librarySizes", "promoter", "exon", "intron", "unknown")]
 plotAnnot(ce, "counts")
