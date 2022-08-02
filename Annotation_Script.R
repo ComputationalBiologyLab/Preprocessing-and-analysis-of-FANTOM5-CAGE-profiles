@@ -1,4 +1,4 @@
-x <- read.delim("F:/MSCs to NSCs/DEGs/Read_Counts/hg38/Trial/mart_export_chrM_updated.txt", stringsAsFactors = FALSE) 
+x <- read.delim("/Users/cesc/Desktop/Asmaa/MSCs_Target/human_GRCh38_mart.txt", stringsAsFactors = FALSE) 
 e <- GRanges(paste0("chr", x$Chromosome.scaffold.name),
              IRanges(x$Exon.region.start..bp., x$Exon.region.end..bp.),
              ifelse(x$Strand + 1, "+", "-"))
@@ -48,4 +48,4 @@ t <- sort(unique(t))
 gff <- sort(c(g, t, e))
 seqlevels(gff) <- seqlevelsInUse(gff)
 
-save(gff , file = "human_ann_chrM.RData", compress = "xz")
+save(gff , file = "human_ann.RData", compress = "xz")
